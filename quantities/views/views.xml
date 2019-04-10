@@ -1,0 +1,45 @@
+<odoo>
+  <data>
+-
+    <record model="ir.ui.view" id="quantities.measures">
+      <field name="name">measures.fields</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <field name="amount_tax" position="after">
+           <field name="x_unit" string="Unit" readonly="1"  attrs="{'invisible': [('x_unit','=',0.00)]}"/>
+           <field name="x_cm" string="cm" readonly="1" attrs="{'invisible': [('x_cm','=',0.00)]}"/>
+           <field name="x_day" string="Day" readonly="1"  attrs="{'invisible': [('x_day','=',0.00)]}"/>
+           <field name="x_dozen" string="Dozen" readonly="1"  attrs="{'invisible': [('x_dozen','=',0.00)]}"/>
+           <field name="x_foot" string="foot" readonly="1"  attrs="{'invisible': [('x_foot','=',0.00)]}"/>
+           <field name="x_inch" string="inch(es)" readonly="1"  attrs="{'invisible': [('x_inch','=',0.00)]}"/>
+           <field name="x_kg" string="Kg" readonly="1"  attrs="{'invisible': [('x_kg','=',0.00)]}"/>
+           <field name="x_sqm" string="SQM" readonly="1"  attrs="{'invisible': [('x_sqm','=',0.00)]}"/>
+           <field name="x_liter" string="Liter" readonly="1"  attrs="{'invisible': [('x_liter','=',0.00)]}"/>
+        </field>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="quantities.uom">
+      <field name="name">uom.fields</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="arch" type="xml">
+        <field name="amount_tax" position="after">
+           <field name="i_unit" string="Unit" readonly="1"  attrs="{'invisible': [('i_unit','=',0.00)]}"/>
+           <field name="i_cm" string="cm" readonly="1" attrs="{'invisible': [('i_cm','=',0.00)]}"/>
+           <field name="i_day" string="Day" readonly="1"  attrs="{'invisible': [('i_day','=',0.00)]}"/>
+           <field name="i_dozen" string="Dozen" readonly="1"  attrs="{'invisible': [('i_dozen','=',0.00)]}"/>
+           <field name="i_foot" string="foot" readonly="1"  attrs="{'invisible': [('i_foot','=',0.00)]}"/>
+           <field name="i_inch" string="inch(es)" readonly="1"  attrs="{'invisible': [('i_inch','=',0.00)]}"/>
+           <field name="i_kg" string="Kg" readonly="1"  attrs="{'invisible': [('i_kg','=',0.00)]}"/>
+           <field name="i_sqm" string="SQM" readonly="1"  attrs="{'invisible': [('i_sqm','=',0.00)]}"/>
+           <field name="i_liter" string="Liter" readonly="1"  attrs="{'invisible': [('i_liter','=',0.00)]}"/>
+        </field>
+      </field>
+    </record>
+ 
+
+  </data>
+</odoo>

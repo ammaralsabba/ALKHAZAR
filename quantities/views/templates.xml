@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+
+            <template id="demo_print_quotation" inherit_id="sale.report_saleorder_document">
+                  <xpath expr="///table" position="after">
+
+                      <td t-if="doc.x_unit != 0"><strong style="margin-left:100mm;" class="text-right">Unit: </strong><span t-field="doc.x_unit"/></td>
+                      <td t-if="doc.x_day != 0"><strong style="margin-left:100mm;" class="text-right">Day: </strong><span t-field="doc.x_day"/></td>
+                      <td t-if="doc.x_cm != 0"><strong style="margin-left:100mm;" class="text-right">CM: </strong><span t-field="doc.x_cm"/></td>
+                      <td t-if="doc.x_dozen != 0"><strong style="margin-left:100mm;" class="text-right">Dozen: </strong><span t-field="doc.x_dozen"/></td>
+                      <td t-if="doc.x_foot != 0"><strong style="margin-left:100mm;" class="text-right">Foot: </strong><span t-field="doc.x_foot"/></td>
+                      <td t-if="doc.x_inch != 0"><strong style="margin-left:100mm;" class="text-right">inch: </strong><span t-field="doc.x_inch"/></td>
+                      <td t-if="doc.x_kg != 0"><strong style="margin-left:100mm;" class="text-right">Kg: </strong><span t-field="doc.x_kg"/></td>
+                      <td t-if="doc.x_sqm != 0"><strong style="margin-left:100mm;" class="text-right">SQM: </strong><span t-field="doc.x_sqm"/></td>
+                      <td t-if="doc.x_liter != 0"><strong style="margin-left:100mm;" class="text-right">Liter: </strong><span t-field="doc.x_liter"/></td>
+          </xpath>
+      </template> 
+
+         <template id="print_invoice" inherit_id="account.report_invoice_document">
+                 <xpath expr="///table" position="after">
+  
+                      <td t-if="o.i_unit != 0"><strong style="margin-left:90mm;" class="text-right">Unit: </strong><span t-field="o.i_unit"/></td>
+                      <td t-if="o.i_day != 0"><strong class="text-right">Day: </strong><span t-field="o.i_day"/></td>
+                      <td t-if="o.i_cm != 0"><strong class="text-right">CM: </strong><span t-field="o.i_cm"/></td>
+                      <td t-if="o.i_dozen != 0"><strong class="text-right">Dozen: </strong><span t-field="o.i_dozen"/></td>
+                      <td t-if="o.i_foot != 0"><strong class="text-right">Foot: </strong><span t-field="o.i_foot"/></td>
+                      <td t-if="o.i_inch != 0"><strong class="text-right">inch: </strong><span t-field="o.i_inch"/></td>
+                      <td t-if="o.i_kg != 0"><strong class="text-right">Kg: </strong><span t-field="o.i_kg"/></td>
+                      <td t-if="o.i_sqm != 0"><strong class="text-right">SQM: </strong><span t-field="o.i_sqm"/></td>
+                      <td t-if="o.i_liter != 0"><strong class="text-right">Liter: </strong><span t-field="o.i_liter"/></td>
+
+           
+         </xpath>
+        </template> 
+
+
+
+    </data>
+</odoo>
